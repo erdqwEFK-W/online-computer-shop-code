@@ -234,14 +234,6 @@ cout << "OPTICAL DRIVE : " << ODChoice << " - $";
 
     cout << "You saved $" << fixed << setprecision(2) << (totalCost - discountedTotalCost) << " with a " << (discount * 100) << "% discount!" << endl;
 cout<<"************************************************************************************"<<endl;
-   char repeatChoice;
-        cout << "Would you like to make another purchase? (y/n) ";
-        cin >> repeatChoice;
-
-        if (repeatChoice != 'y' && repeatChoice != 'Y') {
-
- // Exit the loop if the customer does not want to continue
-                    }
-
+  
     return 0;
 }
