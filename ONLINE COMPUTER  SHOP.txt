@@ -1,0 +1,247 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // Declare variables to store user choices and total cost
+    string caseChoice, ramChoice, hddChoice, ssdChoice, HDDChoice, ODChoice, osChoice;
+    double totalCost = 0.0;
+    int productCount = 0;
+
+    // Display product options
+    cout << "                         Welcome to the Online Computer Shop!" << endl;
+    cout<<"                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"<<endl;
+    cout<<" if you buy 2 product get 5% discount"<<endl;
+     cout<<" if you buy more then 2 product get 10% discount"<<endl;
+     cout<<" please apply correct product code "<<endl;
+     cout<<"if put incorrect code system give invalid "<<endl;
+cout<<"##################################################################################"<<endl;
+    // Choose a Case
+    while (true) {
+    cout << "Choose a Case:" << endl;
+    cout << "A1 - Compact Case - $75" << endl;
+    cout << "A2 - Tower Case - $150" << endl;
+     cout << "S - Skip" << endl;
+        cin >> caseChoice;
+
+        if (caseChoice == "S") {
+            cout << "                                                                 Case skipped." << endl;
+            break;  // Skip to the next component
+        } else if (caseChoice != "A1" && caseChoice != "A2") {
+            cout << "Invalid case choice. Please choose a valid option." << endl;
+        } else {
+            // Update the total cost and product count
+            totalCost += (caseChoice == "A1") ? 75.0 : (caseChoice == "A2")? 150.0:(ramChoice == "S") ? 00 : 00;
+            productCount++;
+            break;  // Move on to the next component
+        }
+    }
+             cout<<"************************************************************************************"<<endl;
+    // Choose RAM
+    while (true) {
+
+    cout << "Choose RAM:" << endl;
+    cout << "B1 - 8 GB RAM - $79.99" << endl;
+    cout << "B2 - 16 GB RAM - $149.99" << endl;
+    cout << "B3 - 32 GB RAM - $299.99" << endl;
+    cout << "S - Skip" << endl;
+    cin >> ramChoice;
+
+        if (ramChoice == "S") {
+        cout << "                                                                  RAM skipped." << endl;
+            break;  // Skip to the next component
+        }
+
+         else if (ramChoice != "B1" && ramChoice != "B2" && ramChoice != "B3") {
+            cout << "Invalid RAM choice. Please choose a valid option." << endl;
+        } else {
+            // Update the total cost and product count
+            totalCost += (ramChoice == "B1") ? 79.99 : (ramChoice == "B2") ? 149.99 :(ramChoice == "B3") ? 299.99 :(ramChoice == "S") ? 00 : 00;
+            productCount++;
+            break;  // Move on to the next component
+        }
+    }
+         cout<<"************************************************************************************"<<endl;
+    // Continue adding similar loops for the remaining product options...
+ while (true) {
+         cout << "Choose Main Hard Disk Drive:" << endl;
+    cout << "C1 - 1 TB HDD - $49.99" << endl;
+    cout << "C2 - 2 TB HDD - $89.99" << endl;
+    cout << "C3 - 4 TB HDD - $129.99" << endl;
+    cout << "S - Skip" << endl;
+    cin >> hddChoice;
+
+        if (hddChoice == "S") {
+            cout << "                                                                  HDD skipped." << endl;
+            break;  // Skip to the next component
+        } else if (hddChoice != "C1" && hddChoice != "C2" && hddChoice != "C3") {
+            cout << "Invalid HDD choice. Please choose a valid option." << endl;
+        } else {
+            // Update the total cost and product count
+            totalCost += (hddChoice == "C1") ? 49.99 : (hddChoice == "C2") ? 89.99 : (hddChoice == "C2") ? 129.99: 00.00;
+            productCount++;
+            break;  // Move on to the next component
+        }
+    }
+              cout<<"************************************************************************************"<<endl;
+
+          while (true) {
+    cout << "Choose Solid State Drive:" << endl;
+    cout << "D1 - 240 GB SSD - $59.99" << endl;
+    cout << "D2 - 480 GB SSD - $119.99" << endl;
+    cout << "S - Skip" << endl;
+    cin >> ssdChoice;
+
+        if (ssdChoice == "S") {
+            cout << "                                                                   SSD skipped." << endl;
+            break;  // Skip to the next component
+        } else if (ssdChoice != "D1" && ssdChoice != "D2") {
+            cout << "Invalid ssd choice. Please choose a valid option." << endl;
+        } else {
+            // Update the total cost and product count
+            totalCost += (ssdChoice == "D1") ?59.99: (ssdChoice == "D2")?119.99 :(ssdChoice == "S") ? 00 : 00;
+            productCount++;
+            break;  // Move on to the next component
+        }
+    }
+
+
+             cout<<"************************************************************************************"<<endl;
+
+ while (true) {
+       cout << "Choose Second Hard Disk Drive:" << endl;
+    cout << "E1 - 1 TB Second HDD - $49.99" << endl;
+    cout << "E2 - 2 TB Second HDD - $89.99" << endl;
+    cout << "E3 - 4 TB Second HDD - $129.99" << endl;
+    cout << "S - Skip" << endl;
+    cin >> HDDChoice;
+
+        if (HDDChoice == "S") {
+            cout << "                                                                  HDD skipped." << endl;
+            break;  // Skip to the next component
+        } else if (HDDChoice != "E1" && HDDChoice != "E2" && HDDChoice != "E3") {
+            cout << "Invalid HDD choice. Please choose a valid option." << endl;
+        } else {
+            // Update the total cost and product count
+            totalCost += (HDDChoice == "E1") ? 49.99 : (HDDChoice == "E2") ? 89.99 : (HDDChoice == "E3") ? 129.99: 00.00;
+            productCount++;
+            break;  // Move on to the next component
+        }
+    }
+              cout<<"************************************************************************************"<<endl;
+
+ while (true) {
+    cout << "Choose Optical Drive:" << endl;
+    cout << "F1 - DVD/Blu-Ray Player - $50" << endl;
+    cout << "F2 - DVD/Blu-Ray Re-writer - $100" << endl;
+    cout << "S - Skip" << endl;
+    cin >> ODChoice;
+
+        if (ODChoice == "S") {
+            cout << "                                                                   OD skipped." << endl;
+            break;  // Skip to the next component
+        } else if (ODChoice != "F1" && ODChoice != "F2") {
+            cout << "Invalid ssd choice. Please choose a valid option." << endl;
+        } else {
+            // Update the total cost and product count
+            totalCost += (ODChoice == "F1") ?50: (ODChoice == "F2")?100.:(ODChoice == "S") ? 00 : 00;
+            productCount++;
+            break;  // Move on to the next component
+        }
+    }
+
+
+             cout<<"************************************************************************************"<<endl;
+
+
+
+
+ while (true) {
+     cout << "Do you want to include an Operating System?" << endl;
+    cout << "G1 - STANDARD OS - $100" << endl;
+    cout << "G2 - PROFESSIONAL OS - $175" << endl;
+    cout << "S - Skip" << endl;
+    cin >> osChoice;
+
+        if (osChoice == "S") {
+            cout << "                                                                   OS skipped." << endl;
+            break;  // Skip to the next component
+        } else if (osChoice != "G1" && osChoice != "G2") {
+            cout << "Invalid OS choice. Please choose a valid option." << endl;
+        } else {
+            // Update the total cost and product count
+            totalCost += (osChoice == "G1") ?100: (osChoice == "G2")?175:(osChoice == "S") ? 00 : 00;
+            productCount++;
+            break;  // Move on to the next component
+        }
+    }
+
+
+             cout<<"************************************************************************************"<<endl;
+    // Calculate the discount based on the number of products
+    double discount = (productCount == 2) ? 0.05 : (productCount > 2) ? 0.10 : 0.0;
+    double discountedTotalCost = totalCost - (totalCost * discount);
+
+    // Display the summary and total cost
+    cout << "Chosen Case: " << caseChoice << " - $";
+    if (caseChoice == "A1") cout << "75" << endl;
+    else if (caseChoice == "A2") cout << "150" << endl;
+    else cout << "00.00" << endl;
+
+    cout << "Chosen RAM: " << ramChoice << " - $";
+    if (ramChoice == "B1") cout << "79.99" << endl;
+    else if (ramChoice == "B2") cout << "149.99" << endl;
+    else if (ramChoice == "B3") cout << "299.99" << endl;
+    else cout << "00.00" << endl;
+
+    cout << "Chosen HDD: " << hddChoice << " - $";
+    if (hddChoice == "C1") cout << "49.99" << endl;
+    else if (hddChoice == "C2") cout << "89.99" << endl;
+    else if (hddChoice == "C3") cout << "129.99" << endl;
+    else cout << "00.00" << endl;
+
+     cout << "SSD : " << ssdChoice << " - $";
+    if (ssdChoice == "D1") cout << "75" << endl;
+    else if (ssdChoice == "D2") cout << "150" << endl;
+    else cout << "00.00" << endl;
+
+ cout << "Chosen SECOND HDD: " << HDDChoice << " - $";
+    if (HDDChoice == "E1") cout << "49.99" << endl;
+    else if (HDDChoice == "E2") cout << "89.99" << endl;
+    else if (HDDChoice == "E3") cout << "129.99" << endl;
+    else cout << "00.00" << endl;
+
+cout << "OPTICAL DRIVE : " << ODChoice << " - $";
+    if (ODChoice == "F1") cout << "50" << endl;
+    else if (ODChoice == "F2") cout << "100" << endl;
+    else cout << "00.00" << endl;
+
+
+    cout << "OPERATING SYSTEM : " << osChoice << " - $";
+    if (osChoice == "G1") cout << "100" << endl;
+    else if (osChoice == "G2") cout << "175" << endl;
+    else cout << "00.00" << endl;
+
+
+
+
+
+    // Display the summary for the remaining product choices...
+
+    cout << "Total Cost:                                                           $" << fixed << setprecision(2) << discountedTotalCost << endl;
+
+    cout << "You saved $" << fixed << setprecision(2) << (totalCost - discountedTotalCost) << " with a " << (discount * 100) << "% discount!" << endl;
+cout<<"************************************************************************************"<<endl;
+   char repeatChoice;
+        cout << "Would you like to make another purchase? (y/n) ";
+        cin >> repeatChoice;
+
+        if (repeatChoice != 'y' && repeatChoice != 'Y') {
+
+ // Exit the loop if the customer does not want to continue
+                    }
+
+    return 0;
+}
